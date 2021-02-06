@@ -1,0 +1,4 @@
+{
+    "path_to_dataset": "/home/user/datasets/cityscapes",
+    "camera": "leftImg8bit"
+}

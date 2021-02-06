@@ -1,0 +1,22 @@
+net: "./models/tanh_segnet_train.prototxt"
+test_initialization: false
+# test_iter: 200
+# test_interval: 200000
+
+# base_lr: 0.00000001
+# lr_policy: "step"
+# gamma: 0.1
+# stepsize: 10000
+
+base_lr: 0.0000001
+lr_policy: "poly"
+power: 4
+max_iter: 40000
+
+display: 50
+momentum: 0.9
+iter_size: 2
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "./weights/tanh_segnet"
+solver_mode: GPU

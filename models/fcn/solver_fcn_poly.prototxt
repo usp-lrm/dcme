@@ -1,0 +1,24 @@
+train_net: "./models/fcn/fcn_train.prototxt"
+
+test_initialization: false
+# test_net: "./models/val.prototxt"
+# test_iter: 736
+## make test net, but don't invoke it from the solver itself
+# test_interval: 999999999
+
+display: 50
+average_loss: 20
+# base_lr: 1e-14    # original lr
+# base_lr: 1e-10    # 0-40k iter
+lr_policy: "poly"
+base_lr: 1e-10
+power: 10
+
+momentum: 0.99
+iter_size: 2
+max_iter: 80000
+weight_decay: 0.0005
+solver_mode: GPU
+
+snapshot: 2000
+snapshot_prefix: "./weights/fcn_8_poly"
